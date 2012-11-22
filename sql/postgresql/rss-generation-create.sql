@@ -21,7 +21,7 @@ select inline_0 ();
 
 drop function inline_0 ();
 
-create function inline_1 ()
+create or replace function inline_1 ()
 returns integer as '
 begin
     PERFORM acs_attribute__create_attribute (
@@ -165,7 +165,8 @@ comment on column rss_gen_subscrs.channel_link is '
 ';
 
 select define_function_args ('rss_gen_subscr__new','p_subscr_id,p_impl_id,p_summary_context_id,p_timeout,p_lastbuild;now,p_object_type,p_creation_date;now,p_creation_user,p_creation_ip,p_context_id');
-create function rss_gen_subscr__new (
+
+create or replace function rss_gen_subscr__new (
     integer,                   -- subscr_id
     integer,                   -- impl_id
     varchar,                   -- summary_context_id
@@ -215,7 +216,7 @@ begin
 
 end;' language 'plpgsql';
 
-create function rss_gen_subscr__name (integer)
+create or replace function rss_gen_subscr__name (integer)
 returns varchar as '
 declare
   p_subscr_id				alias for $1;
