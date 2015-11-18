@@ -73,11 +73,7 @@ if { ![info exists channel_title] || [string equal $channel_title ""] || [string
     }
 }
 
-set formvars [export_form_vars subscr_id           \
-			       impl_id             \
-			       summary_context_id  \
-			       return_url          \
-			       meta]
+set formvars [export_vars -form {subscr_id impl_id summary_context_id return_url meta}]
 
 set context [list Add/Edit]
 
