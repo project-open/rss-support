@@ -3,13 +3,13 @@ ad_page_contract  {
 } {
     subscr_id:notnull,naturalnum
     return_url:notnull
-    delete_file_p:optional
+    delete_file_p:boolean,optional
 }
 
-ad_require_permission $subscr_id admin
+permission::require_permission -object_id $subscr_id -privilege admin
 
-if [info exists delete_file_p] {
-    ns_unlink -nocomplain [rss_gen_report_file -subscr_id $subscr_id]
+if {[info exists delete_file_p]} {
+    file delete [rss_gen_report_file -subscr_id $subscr_id]
 }
 
 db_exec_plsql delete_subscr {}
