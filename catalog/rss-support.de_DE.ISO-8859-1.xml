@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <message_catalog package_key="rss-support" locale="de_DE" charset="ISO-8859-1">
 
-  <msg key="Create_feed">Neuer RSS Feed</msg>
+  <msg key="Create_feed">Neuer RSS-Feed</msg>
   <msg key="Remove_feed">Löschen RSS Feed</msg>
   <msg key="Rss_feed_active">Aktiver RSS Feed</msg>
   <msg key="Rss_feed_inactive">Inaktiver RSS Feed</msg>
