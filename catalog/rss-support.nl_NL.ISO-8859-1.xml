@@ -5,4 +5,5 @@
   <msg key="Remove_feed">Verwijder RSS-toevoer</msg>
   <msg key="Rss_feed_active">RSS-toevoer aktief</msg>
   <msg key="Rss_feed_inactive">RSS-toevoer inaktief</msg>
+  <msg key="Syndication_Feed">Syndicatie feed</msg>
 </message_catalog>
